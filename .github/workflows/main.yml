@@ -1,16 +1,19 @@
 name: Java Servlet Workflow
+
 on: 
   push:
     branches:
       - main
+
 jobs:
   myFirstJob:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest  # Fixed: space after colon
     steps:
       - name: My First Step
-        run: printenv
+        run: printenv  # This might not work as expected
+      
       - name: My Second Command
-        run:|
+        run: |  # Fixed: proper multi-line command syntax
           echo "Test"
           echo "Hello" > file.txt
           ls
