@@ -7,13 +7,16 @@ on:
 
 jobs:
   myFirstJob:
-    runs-on: ubuntu-latest  # Fixed: space after colon
+    runs-on: ubuntu-latest  
     steps:
       - name: My First Step
-        run: printenv  # This might not work as expected
+        run: printenv  
       
       - name: My Second Command
-        run: |  # Fixed: proper multi-line command syntax
+        run: |  
           echo "Test"
           echo "Hello" > file.txt
           ls
+          cat file.txt
+      - name: Sleep step
+        run: sleep 5
