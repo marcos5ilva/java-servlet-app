@@ -9,6 +9,8 @@ jobs:
   myFirstJob:
     runs-on: ubuntu-latest  
     steps:
+      - name: My First Action
+        uses: actions/checkout@v5
       - name: My First Step
         run: printenv  
       
